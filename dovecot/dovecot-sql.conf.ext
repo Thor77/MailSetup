@@ -1,0 +1,9 @@
+driver = pgsql
+
+connect = host=localhost dbname=vmail user=vmail
+
+default_pass_scheme = SHA512-CRYPT
+
+password_query = SELECT username, domain, password FROM users WHERE username='%n' AND domain='%d'
+
+iterate_query = SELECT username, domain FROM users

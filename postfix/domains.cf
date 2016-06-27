@@ -1,0 +1,5 @@
+hosts = localhost
+user = vmail
+dbname = vmail
+
+query = SELECT domain FROM vmail_users WHERE domain='%s'

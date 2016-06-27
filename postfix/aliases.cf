@@ -1,0 +1,5 @@
+hosts = localhost
+user = vmail
+dbname = vmail
+
+query = SELECT destination FROM aliases WHERE source='%s'
