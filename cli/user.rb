@@ -27,7 +27,7 @@ module MailmgrCLI
         # remove domain-relations
         (VdomainVuser.all vuser: user).destroy
       end
-      user.destroy
+      users.destroy
       puts "Successfully removed user '#{name}'"
     end
 
