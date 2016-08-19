@@ -2,4 +2,5 @@ hosts = localhost
 user = vmail
 dbname = vmail
 
-query = SELECT domain FROM vmail_users WHERE domain='%s'
+query = SELECT name FROM vdomains WHERE name='%s'
+
