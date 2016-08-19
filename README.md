@@ -49,10 +49,18 @@ Installation
 * Add/Modify `/etc/postfix/main.cf`
 
 ```
+# use dovecot for mail-transport
+virtual_transport = lmtp:unix:private/dovecot-lmtp
+
+virtual_mailbox_base = <path to vmail>
+# sql-configuration
 virtual_alias_maps = pgsql:/etc/postfix/sql/aliases.cf
 virtual_mailbox_maps = pgsql:/etc/postfix/sql/maps.cf
 virtual_mailbox_domains = pgsql:/etc/postfix/sql/domains.cf
 local_recipient_maps = $virtual_mailbox_maps
+# vmail-user
+virtual_uid_maps = static:<uid of vmail>
+virtual_gid_maps = static:<uid of vmail>
 ```
 
 Testing
