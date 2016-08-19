@@ -11,7 +11,7 @@ module MailmgrCLI
       a = Valias.new source: source, vuser_id: target.id, vdomain_id: domain.id
       a.raise_on_save_failure = true
       a.save
-      puts "Successfully added alias '#{source.name}@#{domain.name}' =>"
+      puts "Successfully added alias '#{source}@#{domain.name}' =>"
       "'#{target.name}'"
     end
 
