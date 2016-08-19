@@ -49,10 +49,6 @@ Installation
 * Add/Modify `/etc/postfix/main.cf`
 
 ```
-hosts = localhost
-user = vmail
-dbname = vmail
-
 virtual_alias_maps = pgsql:/etc/postfix/sql/aliases.cf
 virtual_mailbox_maps = pgsql:/etc/postfix/sql/maps.cf
 virtual_mailbox_domains = pgsql:/etc/postfix/sql/domains.cf
