@@ -61,7 +61,7 @@ local_recipient_maps = $virtual_mailbox_maps
 
 Testing
 =======
-* `doveadm auth test <username>@<domain>`
+* `doveadm auth test <username>`
 * `postmap -q <username>@<domain> pgsql:/etc/postfix/sql/maps.cf`
 * `postmap -q <domain> pgsql:/etc/postfix/sql/domains.cf`
 * `postmap -q <username>@<domain> pgsql:/etc/postfix/sql/aliases.cf`
