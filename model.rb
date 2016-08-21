@@ -11,9 +11,8 @@ class Vuser
   property :name, String
   property :password, String, length: 120
 
-  has n, :vdomains, through: Resource
-
   has n, :valiass
+  belongs_to :vdomain
 end
 
 # Virtual Domain
@@ -23,9 +22,8 @@ class Vdomain
   property :id, Serial
   property :name, String
 
-  has n, :vusers, through: Resource
-
   has n, :valiass
+  has n, :vusers
 end
 
 # Virtual Alias
