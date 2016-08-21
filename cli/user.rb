@@ -11,9 +11,7 @@ module MailmgrCLI
 
     desc 'add <name> <password>', 'Add a new user'
     def add(name, password)
-      if password.length > 120
-        raise 'Password too long!'
-      end
+      raise 'Password too long!' if password.length > 120
       user = Vuser.new name: name, password: password
       user.raise_on_save_failure = true
       user.save
