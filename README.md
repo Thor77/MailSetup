@@ -24,11 +24,6 @@ cli.rb alias add <source> <domain> <target>  # Add a new alias
 cli.rb alias list                            # List all aliases
 cli.rb alias remove <id>                     # Remove an alias by id
 ```
-```
-cli.rb user domain add <user> <domain>     # Add a domain to a user
-cli.rb user domain list <user>             # List domains of a user
-cli.rb user domain remove <user> <domain>  # Remove a domain from a user
-```
 
 Installation
 ============
