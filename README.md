@@ -9,10 +9,9 @@ Database
 Command-Line-Interface
 ======================
 ```
-cli.rb user add <name> <password>      # Add a new user
-cli.rb user domain SUBCOMMAND ...ARGS  # Manage user-domain relations
-cli.rb user list                       # List all users
-cli.rb user remove <name>              # Remove a user
+cli.rb user add <name> <domain>  # Add a new user
+cli.rb user list                 # List all users
+cli.rb user remove <name>        # Remove a user
 ```
 ```
 cli.rb domain add <name>      # Add a new domain
