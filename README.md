@@ -65,7 +65,7 @@ virtual_gid_maps = static:<uid of vmail>
 
 Testing
 =======
-* `doveadm auth test <username>`
+* `doveadm auth test <username>@<domain>`
 * `postmap -q <username>@<domain> pgsql:/etc/postfix/sql/maps.cf`
 * `postmap -q <domain> pgsql:/etc/postfix/sql/domains.cf`
 * `postmap -q <username>@<domain> pgsql:/etc/postfix/sql/aliases.cf`
