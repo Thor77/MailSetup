@@ -2,9 +2,9 @@ Database
 ========
 | Table | Columns | Description |
 |-------|---------|-------------|
-| User  | id, name, password (maxlength=120) | Virtual user |
-| Domain | id, name | Virtual domain, relating to user |
-| Alias | id, source, vuser, vdomain | Virtual alias, relating to user and domain |
+| vusers | id (`integer`), name (`varchar(50)`), password (`varchar(120)`), vdomain_id (`integer`) | Virtual user |
+| vdomains | id (`integer`), name (`varchar(50)`) | Virtual domain |
+| valiases | id (`integer`), source (`varchar(50)`), vuser_id (`integer`), vdomain_id (`integer`) | Virtual alias |
 
 Command-Line-Interface
 ======================
