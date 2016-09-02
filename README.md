@@ -35,6 +35,7 @@ Installation
 * Copy `dovecot/dovecot-sql.conf.ext` to `/etc/dovecot`
 * modify `/etc/dovecot/conf.d/auth-sql.conf.ext` to use a static userdb
 * Uncomment `auth-sql.conf.ext` in `/etc/dovecot/conf.d/10-auth.conf`
+* Make sure that `auth_username_format` is set to `%Lu` (don't drop the domain for userdb-queries)
 
 ### Postfix
 * `mkdir /etc/postfix/sql`
