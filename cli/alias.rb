@@ -12,7 +12,7 @@ module MailmgrCLI
       a.raise_on_save_failure = true
       a.save
       puts "Successfully added alias '#{source}@#{domain.name}' =>"\
-      "'#{target.name}'"
+      "'#{target.name}@#{target.vdomain.name}'"
     end
 
     desc 'remove <id>', 'Remove an alias by id'
@@ -24,8 +24,9 @@ module MailmgrCLI
     def list
       Valias.all.each do |valias|
         domain = Vdomain.get(valias.vdomain_id)
+        user = Vuser.get(valias.vuser_id)
         puts "#{valias.id} | #{valias.source}@#{domain.name} =>"\
-        " #{Vuser.get(valias.vuser_id).name}"
+        " #{user.name}@#{user.vdomain.name}"
       end
     end
   end
