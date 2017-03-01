@@ -26,8 +26,7 @@ cli.rb alias remove <id>                     # Remove an alias by id
 
 Installation
 ============
-* Install `data_mapper` and the postgres-adapter `dm-postgres-adapter`
-* Run `rake migrate`
+* Install ruby-requirements via [bundler](https://bundler.io/) `bundle install`
 * Create the views in `views/` (`psql <user> <dbname> -f views/{users,aliases}.sql`)
 
 ### Dovecot
