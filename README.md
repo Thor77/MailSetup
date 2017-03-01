@@ -27,8 +27,7 @@ cli.rb alias remove <id>                     # Remove an alias by id
 Installation
 ============
 * Install `data_mapper` and the postgres-adapter `dm-postgres-adapter`
-* Run `ruby model.rb`
-* Remove `model.rb`'s last line (`DataMapper.auto_upgrade!`)
+* Run `rake migrate`
 * Create the views in `views/` (`psql <user> <dbname> -f views/{users,aliases}.sql`)
 
 ### Dovecot

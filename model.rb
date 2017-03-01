@@ -38,5 +38,3 @@ class Valias
 end
 
 DataMapper.finalize
-
-DataMapper.auto_upgrade!
